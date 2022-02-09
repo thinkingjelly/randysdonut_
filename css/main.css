@@ -1,0 +1,306 @@
+@charset 'utf-8';
+
+/*mainSlider*/
+.mainSlider{
+    height:1080px;
+    position:relative;
+    overflow:hidden;
+}
+.mainSlider::after{
+    content:"";
+    display:block;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    position:absolute;
+    top:0;
+    left:0;
+}
+#mainVideo{
+    height:1080px;
+    overflow:hidden;
+}
+.scrollArrow{
+    width:100%;
+    text-align:center;
+    position:absolute;
+    bottom:0;
+    z-index:1;
+}
+.scrollArrow::after{
+    content:"";
+    display:block;
+    width:1px;
+    height:150px;
+    background:#fff;
+    margin:0 auto;
+}
+.scrollArrow span{
+    height:40px;
+    display:block;
+    color:#fff;
+    background:url(../images/scrollArrow.png) no-repeat center 25px;
+    transition:transform 0.5s;
+    animation:scrollArrow 0.5s infinite alternate;
+}
+@keyframes scrollArrow {
+    100% {transform:translate(0,-50%);}
+}
+
+/*mainCon01*/
+.mainCon01{
+    height:1050px;
+    background:url(../images/mainCon01Bg.png) no-repeat left center;
+    position:relative;
+    overflow:hidden;
+}
+.con01TxtWrap{
+    width:1200px;
+    position:absolute;
+    padding-top:110px;
+    z-index:10;
+    left:50%;
+    transform:translate(-50%,0);
+}
+.con01Txt{
+    position:absolute;
+    right:0;
+    top:25%;
+}
+.con01Txt h2{
+    font-family:'Cambria';
+    font-size:65px;
+}
+.con01Txt p{
+    font-family:'SCDream';
+    font-weight:300;
+    word-break:keep-all;
+    margin:50px 0 0 100px;
+}
+.con01Txt span{
+    display:block;
+    font-weight:500;
+}
+.viewBtn{
+    position:absolute;
+    text-align:center;
+    top:60%;
+    right:0;
+}
+.viewBtn a{
+    width:75px;
+    height:75px;
+    line-height:20px;
+    display:block;
+    background:url(../images/viewBtnOff.png) no-repeat center center;
+    font-family:'SCDream';
+    font-weight:500;
+    padding-top:18px;
+    box-sizing:border-box;
+    transition:background-image 0.3s, color 0.3s;
+}
+.con01ImgWrap>div{
+    position:absolute;
+    transition:transform 0.5s;
+}
+.con01ImgWrap .con01Img01{
+    top:5%;
+    right:5%;
+}
+.con01ImgWrap .con01Img02{
+    top:15%;
+    left:10%;
+}
+.con01ImgWrap .con01Img03{
+    top:50%;
+    right:-5%;
+}
+.con01ImgWrap .con01Img04{
+    left:45%;
+    bottom:2%;
+}
+
+/*hover*/
+.viewBtn a:hover{
+    background-image:url(../images/viewBtnOn.png);
+    color:#fff;
+}
+.con01ImgWrap .con01Img01:hover{transform:translate(-50%,0);}
+.con01ImgWrap .con01Img02:hover{transform:translate(-30%,-15%);}
+.con01ImgWrap .con01Img03:hover{transform:translate(-30%,-10%);}
+.con01ImgWrap .con01Img04:hover{transform:translate(40%,-20%);}
+
+/*mainCon02*/
+.mainCon02{
+    text-align:center;
+    margin:150px auto 200px;
+}
+
+.con02Txt p{
+    font-family:'SCDream';
+    font-weight:300;
+    font-size:18px;
+    margin:20px 0 50px;
+}
+.con02Menu{
+    font-family:'NotoSans',sans-serif;
+    font-weight:bold;
+    font-size:22px;
+}
+.con02Menu>li{
+    display:inline-block;
+    margin:0 50px;
+}
+.bestMenuList{
+    margin-top:50px;
+    box-sizing:border-box;
+}
+.bestMenuList li{outline:none;}
+.bestMenuList .slick-slide{
+    width:200px;
+    font-family:'NotoSans',sans-serif;
+    font-size:18px;
+    font-weight:bold;
+    position:relative;
+}
+.bestMenuList li span{
+    display:block;
+    font-size:16px;
+    margin-top:10px;
+}
+.bestMenuList .slick-slide p{color:#fff;}
+.bestMenuList .slick-center p{color:#333;}
+.bestMenuList li img{margin:0 auto;}
+.bestMenuList li.slick-center::before{
+    content:"BEST";
+    display:block;
+    width:80px;
+    height:30px;
+    line-height:28px;
+    color:#fff;
+    background:#fd661f;
+    border-radius:15px;
+    position:absolute;
+    top:30px;
+    right:30px;
+    transition:background 0.3s;
+}
+.slick-dots{
+    display:inline-block;
+    margin:50px 0 0;
+}
+.slick-dots>li{
+    float:left;
+    margin:0 5px;
+}
+.slick-dots>li>button{
+    width:10px;
+    height:10px;
+    background:#ddd;
+    border:0;
+    text-indent:-9999px;
+    border-radius:50%;
+    padding:0;
+    outline:none;
+}
+.slick-dots>li.slick-active>button{background:#fd661f;}
+
+/*mainCon03*/
+.mainCon03{
+    text-align:center;
+    position:relative;
+    margin-bottom:300px;
+}
+.con03Txt p{
+    font-family:'SCDream';
+    font-weight:300;
+    font-size:18px;
+    margin:20px 0 50px;
+}
+.mapArea{
+    height:600px;
+    overflow:hidden;
+    position:relative;
+}
+.mapArea iframe{
+    position:absolute;
+    top:50%;
+    transform:translate(0,-50%);
+    display:block;
+}
+.mapTxt{
+    width:500px;
+    height:350px;
+    line-height:36px;
+    background:#fd661f;
+    color:#fff;
+    font-family:'SCDream',sans-serif;
+    font-size:18px;
+    text-align:left;
+    position:absolute;
+    right:250px;
+    bottom:-170px;
+    padding:50px;
+    box-sizing:border-box;
+    box-shadow:0 0 15px 5px rgba(0, 0, 0, 0.15);
+
+}
+.mapTxt h3{
+    text-align:center;
+    font-size:24px;
+    font-weight:800;
+}
+.mapTxt h3::after{
+    content:"";
+    display:block;
+    width:50%;
+    height:2px;
+    background:#fff;
+    margin:30px auto;
+}
+.mapTxt p{float:left;}
+.mapTxt p span{
+    display:block;
+    font-weight:500;
+}
+.mapTxt .mapInfo{margin-left:30px;}
+.mapTxt .mapInfo span{font-weight:300;}
+
+/*mainCon04*/
+.mainCon04{
+    text-align:center;
+    position:relative;
+    background:url(../images/con04Bg.png) no-repeat center bottom;
+    padding-bottom:80px;
+    text-align:center;
+}
+.mainCon04>p{
+    margin:30px 0;
+    font-family:'SCDream';
+    font-weight:500;
+}
+.mainCon04>p span{display:block;}
+.con04Txt{margin-bottom:80px;}
+.mainCon04 .snsList{
+    width:1200px;
+    display:inline-block
+}
+.mainCon04 .snsList li.slick-slide{
+    width:285px !important;
+    margin-left:20px;
+    outline:none;
+}
+.mainCon04 .snsList li.slick-slide:first-child{margin-left:0;}
+.snsList li,.snsIconList li{float:left;}
+.snsList li img,.snsIconList li a{display:block;}
+.snsIconList{display:inline-block;}
+.snsIconList li{margin:0 10px;}
+.snsIconList li{
+    width:41px;
+    height:41px;
+    text-indent:-9999px;
+    background:url(../images/snsIcon02.png) no-repeat center center;
+}
+.snsIconList li a{height:100%;}
+.snsIconList li:first-child{background:url(../images/snsIcon01.png) no-repeat center center;}
+.snsIconList li:last-child{background:url(../images/snsIcon03.png) no-repeat center center;}
