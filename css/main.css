@@ -39,7 +39,7 @@
     height:40px;
     display:block;
     color:#fff;
-    background:url(images/scrollArrow.png) no-repeat center 25px;
+    background:url(../images/scrollArrow.png) no-repeat center 25px;
     transition:transform 0.5s;
     animation:scrollArrow 0.5s infinite alternate;
 }
